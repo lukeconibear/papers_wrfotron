@@ -1,0 +1,4 @@
+annual simulations for 2014 across india
+wrf-chem version 3.7.1 mozart-mosaic
+one simulation for all sectors on (WRFotron)
+one simulation for residential sector turned OFF (WRFotron_no-res)
