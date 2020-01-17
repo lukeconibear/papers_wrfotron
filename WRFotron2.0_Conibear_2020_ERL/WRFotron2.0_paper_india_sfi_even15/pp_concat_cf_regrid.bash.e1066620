@@ -1,2 +1,0 @@
-/nobackup/pmlac/miniconda2/envs/cfpython2/lib/python2.7/site-packages/cf/data/partitionmatrix.py:636: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
-  b = [partition.location[j][0] for partition in matrix[indices].flat]
