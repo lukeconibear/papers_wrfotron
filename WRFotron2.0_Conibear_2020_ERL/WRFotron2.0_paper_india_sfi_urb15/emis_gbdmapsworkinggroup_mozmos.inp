@@ -1,0 +1,150 @@
+&CONTROL
+ domains = __domains__
+ anthro_dir = '__emissDir__'
+ src_file_prefix = 'GBDMAPSWorkingGroup_India_'
+ src_file_suffix = '_2015_0.25x0.25_MOZMOS.nc'
+ src_names = 'NOX(30)','SO2(64)','BC(12)','OC(12)','PM2.5(1)', ! PM2.5 here is actually OPM2.5 (= PM2.5 - OC - BC) from the inventory
+             'BIGALK(72)','BIGENE(56)','C2H4(28)','C2H5OH(46)','C2H6(30)','CH2O(30)',
+             'CH3CHO(44)','CH3COCH3(58)','CH3OH(32)','MEK(72)','TOLUENE(92)','C3H6(42)','C3H8(44)',
+             'BENZENE(78)','XYLENE(106)'
+ sub_categories  = 'emis_bric', ! GBD MAPS Working Group
+                   'emis_dsdl', ! GBD MAPS Working Group
+                   'emis_icol', ! GBD MAPS Working Group
+                   'emis_obrn', ! GBD MAPS Working Group
+                   'emis_othr', ! GBD MAPS Working Group
+                   'emis_pcol', ! GBD MAPS Working Group
+                   'emis_rebm', ! GBD MAPS Working Group
+                   'emis_tran', ! GBD MAPS Working Group
+                   'emis_dustbin1_2', ! GBD MAPS Working Group, OPM2.5 only
+                   'emis_dustbin3',   ! GBD MAPS Working Group, OPM2.5 only
+                   'emis_total' ! GBD MAPS Working Group
+ cat_var_prefix  = ' '
+! serial_output   = .true.
+! start_output_time = '__startYear__-__startMonth__-__startDay_____startHour__:00:00'
+! stop_output_time = '__endYear__-__endMonth__-__endDay_____endHour__:00:00'
+! output_interval = 3600
+ data_yrs_offset   = __emissYearOffset__,
+ emissions_zdim_stag = 1
+ emis_map = 'ECI_TRAN(a)->0.1*BC(emis_tran)','ECI_ICOL(a)->0.1*BC(emis_icol)', ! nucleation mode
+            'ECI_REBM(a)->0.1*BC(emis_rebm)','ECI_PCOL(a)->0.1*BC(emis_pcol)', ! nucleation mode
+            'ECI_BRIC(a)->0.1*BC(emis_bric)','ECI_OTHR(a)->0.1*BC(emis_othr)', ! nucleation mode
+            'ECI_DSDL(a)->0.1*BC(emis_dsdl)','ECI_OBRN(a)->0.1*BC(emis_obrn)', ! nucleation mode
+            'ECI(a)->0.1*BC(emis_total)', ! nucleation mode
+            'ECJ_TRAN(a)->0.9*BC(emis_tran)','ECJ_ICOL(a)->0.9*BC(emis_icol)', ! accumulation mode
+            'ECJ_REBM(a)->0.9*BC(emis_rebm)','ECJ_PCOL(a)->0.9*BC(emis_pcol)', ! accumulation mode
+            'ECJ_BRIC(a)->0.9*BC(emis_bric)','ECJ_OTHR(a)->0.9*BC(emis_othr)', ! accumulation mode
+            'ECJ_DSDL(a)->0.9*BC(emis_dsdl)','ECJ_OBRN(a)->0.9*BC(emis_obrn)', ! accumulation mode
+            'ECJ(a)->0.9*BC(emis_total)', ! accumulation mode
+            'NO_TRAN->0.8*NOX(emis_tran)','NO_ICOL->0.8*NOX(emis_icol)',
+            'NO_REBM->0.8*NOX(emis_rebm)','NO_PCOL->0.8*NOX(emis_pcol)',
+            'NO_BRIC->0.8*NOX(emis_bric)','NO_OTHR->0.8*NOX(emis_othr)',
+            'NO_DSDL->0.8*NOX(emis_dsdl)','NO_OBRN->0.8*NOX(emis_obrn)',
+            'NO->0.8*NOX(emis_total)',
+            'NO2_TRAN->0.2*NOX(emis_tran)','NO2_ICOL->0.2*NOX(emis_icol)',
+            'NO2_REBM->0.2*NOX(emis_rebm)','NO2_PCOL->0.2*NOX(emis_pcol)',
+            'NO2_BRIC->0.2*NOX(emis_bric)','NO2_OTHR->0.2*NOX(emis_othr)',
+            'NO2_DSDL->0.2*NOX(emis_dsdl)','NO2_OBRN->0.2*NOX(emis_obrn)',
+            'NO2->0.2*NOX(emis_total)',
+            'ORGI_TRAN(a)->0.1*OC(emis_tran)','ORGI_ICOL(a)->0.1*OC(emis_icol)', ! nucleation mode
+            'ORGI_REBM(a)->0.1*OC(emis_rebm)','ORGI_PCOL(a)->0.1*OC(emis_pcol)', ! nucleation mode
+            'ORGI_BRIC(a)->0.1*OC(emis_bric)','ORGI_OTHR(a)->0.1*OC(emis_othr)', ! nucleation mode
+            'ORGI_DSDL(a)->0.1*OC(emis_dsdl)','ORGI_OBRN(a)->0.1*OC(emis_obrn)', ! nucleation mode
+            'ORGI(a)->0.1*OC(emis_total)', ! nucleation mode
+            'ORGJ_TRAN(a)->0.9*OC(emis_tran)','ORGJ_ICOL(a)->0.9*OC(emis_icol)', ! accumulation mode
+            'ORGJ_REBM(a)->0.9*OC(emis_rebm)','ORGJ_PCOL(a)->0.9*OC(emis_pcol)', ! accumulation mode
+            'ORGJ_BRIC(a)->0.9*OC(emis_bric)','ORGJ_OTHR(a)->0.9*OC(emis_othr)', ! accumulation mode
+            'ORGJ_DSDL(a)->0.9*OC(emis_dsdl)','ORGJ_OBRN(a)->0.9*OC(emis_obrn)', ! accumulation mode
+            'ORGJ(a)->0.9*OC(emis_total)', ! accumulation mode
+            'PM25I_TRAN(a)->0.1*PM2.5(emis_tran)','PM25I_ICOL(a)->0.1*PM2.5(emis_icol)', ! nucleation mode
+            'PM25I_REBM(a)->0.1*PM2.5(emis_rebm)','PM25I_PCOL(a)->0.1*PM2.5(emis_pcol)', ! nucleation mode
+            'PM25I_BRIC(a)->0.1*PM2.5(emis_bric)','PM25I_OTHR(a)->0.1*PM2.5(emis_othr)', ! nucleation mode
+            'PM25I_DSDL(a)->0.1*PM2.5(emis_dsdl)','PM25I_OBRN(a)->0.1*PM2.5(emis_obrn)', ! nucleation mode
+            'PM25I_DUSS(a)->0.1*PM2.5(emis_dustbin1_2)', ! nucleation mode
+            'PM25I(a)->0.1*PM2.5(emis_total)', ! nucleation mode
+            'PM25J_TRAN(a)->0.9*PM2.5(emis_tran)','PM25J_ICOL(a)->0.9*PM2.5(emis_icol)', ! accumulation mode
+            'PM25J_REBM(a)->0.9*PM2.5(emis_rebm)','PM25J_PCOL(a)->0.9*PM2.5(emis_pcol)', ! accumulation mode
+            'PM25J_BRIC(a)->0.9*PM2.5(emis_bric)','PM25J_OTHR(a)->0.9*PM2.5(emis_othr)', ! accumulation mode
+            'PM25J_DSDL(a)->0.9*PM2.5(emis_dsdl)','PM25J_OBRN(a)->0.9*PM2.5(emis_obrn)', ! accumulation mode
+            'PM25J_DUSS(a)->0.9*PM2.5(emis_dustbin1_2)','PM25J_DUSB(a)->PM2.5(emis_dustbin3)', ! accumulation mode
+            'PM25J(a)->0.9*PM2.5(emis_total)', ! accumulation mode
+            'SO2_TRAN->SO2(emis_tran)','SO2_ICOL->SO2(emis_icol)',
+            'SO2_REBM->SO2(emis_rebm)','SO2_PCOL->SO2(emis_pcol)',
+            'SO2_BRIC->SO2(emis_bric)','SO2_OTHR->SO2(emis_othr)',
+            'SO2_DSDL->SO2(emis_dsdl)','SO2_OBRN->SO2(emis_obrn)',
+            'SO2->SO2(emis_total)',
+            'BIGALK_TRAN->BIGALK(emis_tran)','BIGALK_ICOL->BIGALK(emis_icol)',
+            'BIGALK_REBM->BIGALK(emis_rebm)','BIGALK_PCOL->BIGALK(emis_pcol)',
+            'BIGALK_BRIC->BIGALK(emis_bric)','BIGALK_OTHR->BIGALK(emis_othr)',
+            'BIGALK_DSDL->BIGALK(emis_dsdl)','BIGALK_OBRN->BIGALK(emis_obrn)',
+            'BIGALK->BIGALK(emis_total)',
+            'BIGENE_TRAN->BIGENE(emis_tran)','BIGENE_ICOL->BIGENE(emis_icol)',
+            'BIGENE_REBM->BIGENE(emis_rebm)','BIGENE_PCOL->BIGENE(emis_pcol)',
+            'BIGENE_BRIC->BIGENE(emis_bric)','BIGENE_OTHR->BIGENE(emis_othr)',
+            'BIGENE_DSDL->BIGENE(emis_dsdl)','BIGENE_OBRN->BIGENE(emis_obrn)',
+            'BIGENE->BIGENE(emis_total)',
+            'C2H4_TRAN->C2H4(emis_tran)','C2H4_ICOL->C2H4(emis_icol)',
+            'C2H4_REBM->C2H4(emis_rebm)','C2H4_PCOL->C2H4(emis_pcol)',
+            'C2H4_BRIC->C2H4(emis_bric)','C2H4_OTHR->C2H4(emis_othr)',
+            'C2H4_DSDL->C2H4(emis_dsdl)','C2H4_OBRN->C2H4(emis_obrn)',
+            'C2H4->C2H4(emis_total)',
+            'C2H5OH_TRAN->C2H5OH(emis_tran)','C2H5OH_ICOL->C2H5OH(emis_icol)',
+            'C2H5OH_REBM->C2H5OH(emis_rebm)','C2H5OH_PCOL->C2H5OH(emis_pcol)',
+            'C2H5OH_BRIC->C2H5OH(emis_bric)','C2H5OH_OTHR->C2H5OH(emis_othr)',
+            'C2H5OH_DSDL->C2H5OH(emis_dsdl)','C2H5OH_OBRN->C2H5OH(emis_obrn)',
+            'C2H5OH->C2H5OH(emis_total)',
+            'C2H6_TRAN->C2H6(emis_tran)','C2H6_ICOL->C2H6(emis_icol)',
+            'C2H6_REBM->C2H6(emis_rebm)','C2H6_PCOL->C2H6(emis_pcol)',
+            'C2H6_BRIC->C2H6(emis_bric)','C2H6_OTHR->C2H6(emis_othr)',
+            'C2H6_DSDL->C2H6(emis_dsdl)','C2H6_OBRN->C2H6(emis_obrn)',
+            'C2H6->C2H6(emis_total)',
+            'CH2O_TRAN->CH2O(emis_tran)','CH2O_ICOL->CH2O(emis_icol)',
+            'CH2O_REBM->CH2O(emis_rebm)','CH2O_PCOL->CH2O(emis_pcol)',
+            'CH2O_BRIC->CH2O(emis_bric)','CH2O_OTHR->CH2O(emis_othr)',
+            'CH2O_DSDL->CH2O(emis_dsdl)','CH2O_OBRN->CH2O(emis_obrn)',
+            'CH2O->CH2O(emis_total)',
+            'CH3CHO_TRAN->CH3CHO(emis_tran)','CH3CHO_ICOL->CH3CHO(emis_icol)',
+            'CH3CHO_REBM->CH3CHO(emis_rebm)','CH3CHO_PCOL->CH3CHO(emis_pcol)',
+            'CH3CHO_BRIC->CH3CHO(emis_bric)','CH3CHO_OTHR->CH3CHO(emis_othr)',
+            'CH3CHO_DSDL->CH3CHO(emis_dsdl)','CH3CHO_OBRN->CH3CHO(emis_obrn)',
+            'CH3CHO->CH3CHO(emis_total)',
+            'CH3COCH3_TRAN->CH3COCH3(emis_tran)','CH3COCH3_ICOL->CH3COCH3(emis_icol)',
+            'CH3COCH3_REBM->CH3COCH3(emis_rebm)','CH3COCH3_PCOL->CH3COCH3(emis_pcol)',
+            'CH3COCH3_BRIC->CH3COCH3(emis_bric)','CH3COCH3_OTHR->CH3COCH3(emis_othr)',
+            'CH3COCH3_DSDL->CH3COCH3(emis_dsdl)','CH3COCH3_OBRN->CH3COCH3(emis_obrn)',
+            'CH3COCH3->CH3COCH3(emis_total)',
+            'CH3OH_TRAN->CH3OH(emis_tran)','CH3OH_ICOL->CH3OH(emis_icol)',
+            'CH3OH_REBM->CH3OH(emis_rebm)','CH3OH_PCOL->CH3OH(emis_pcol)',
+            'CH3OH_BRIC->CH3OH(emis_bric)','CH3OH_OTHR->CH3OH(emis_othr)',
+            'CH3OH_DSDL->CH3OH(emis_dsdl)','CH3OH_OBRN->CH3OH(emis_obrn)',
+            'CH3OH->CH3OH(emis_total)',
+            'MEK_TRAN->MEK(emis_tran)','MEK_ICOL->MEK(emis_icol)',
+            'MEK_REBM->MEK(emis_rebm)','MEK_PCOL->MEK(emis_pcol)',
+            'MEK_BRIC->MEK(emis_bric)','MEK_OTHR->MEK(emis_othr)',
+            'MEK_DSDL->MEK(emis_dsdl)','MEK_OBRN->MEK(emis_obrn)',
+            'MEK->MEK(emis_total)',
+            'TOLUENE_TRAN->TOLUENE(emis_tran)','TOLUENE_ICOL->TOLUENE(emis_icol)',
+            'TOLUENE_REBM->TOLUENE(emis_rebm)','TOLUENE_PCOL->TOLUENE(emis_pcol)',
+            'TOLUENE_BRIC->TOLUENE(emis_bric)','TOLUENE_OTHR->TOLUENE(emis_othr)',
+            'TOLUENE_DSDL->TOLUENE(emis_dsdl)','TOLUENE_OBRN->TOLUENE(emis_obrn)',
+            'TOLUENE->TOLUENE(emis_total)',
+            'C3H6_TRAN->C3H6(emis_tran)','C3H6_ICOL->C3H6(emis_icol)',
+            'C3H6_REBM->C3H6(emis_rebm)','C3H6_PCOL->C3H6(emis_pcol)',
+            'C3H6_BRIC->C3H6(emis_bric)','C3H6_OTHR->C3H6(emis_othr)',
+            'C3H6_DSDL->C3H6(emis_dsdl)','C3H6_OBRN->C3H6(emis_obrn)',
+            'C3H6->C3H6(emis_total)',
+            'C3H8_TRAN->C3H8(emis_tran)','C3H8_ICOL->C3H8(emis_icol)',
+            'C3H8_REBM->C3H8(emis_rebm)','C3H8_PCOL->C3H8(emis_pcol)',
+            'C3H8_BRIC->C3H8(emis_bric)','C3H8_OTHR->C3H8(emis_othr)',
+            'C3H8_DSDL->C3H8(emis_dsdl)','C3H8_OBRN->C3H8(emis_obrn)',
+            'C3H8->C3H8(emis_total)',
+            'BENZENE_TRAN->BENZENE(emis_tran)','BENZENE_ICOL->BENZENE(emis_icol)',
+            'BENZENE_REBM->BENZENE(emis_rebm)','BENZENE_PCOL->BENZENE(emis_pcol)',
+            'BENZENE_BRIC->BENZENE(emis_bric)','BENZENE_OTHR->BENZENE(emis_othr)',
+            'BENZENE_DSDL->BENZENE(emis_dsdl)','BENZENE_OBRN->BENZENE(emis_obrn)',
+            'BENZENE->BENZENE(emis_total)',
+            'XYLENE_TRAN->XYLENE(emis_tran)','XYLENE_ICOL->XYLENE(emis_icol)',
+            'XYLENE_REBM->XYLENE(emis_rebm)','XYLENE_PCOL->XYLENE(emis_pcol)',
+            'XYLENE_BRIC->XYLENE(emis_bric)','XYLENE_OTHR->XYLENE(emis_othr)',
+            'XYLENE_DSDL->XYLENE(emis_dsdl)','XYLENE_OBRN->XYLENE(emis_obrn)',
+            'XYLENE->XYLENE(emis_total)'
+/

@@ -1,0 +1,33 @@
+&CONTROL
+ domains = 1
+ anthro_dir = '/nobackup/earlacoa/emissions/GBDMAPSWorkingGroup/mozartmosaic'
+ src_file_prefix = 'GBDMAPSWorkingGroup_India_'
+ src_file_suffix = '_2015_0.25x0.25_MOZMOS.nc'
+ src_names = 'CO(28)','NH3(17)'
+ sub_categories  = 'emis_tra', ! EDGAR-HTAPv2.2 
+                   'emis_ind', ! EDGAR-HTAPv2.2 
+                   'emis_res', ! EDGAR-HTAPv2.2 
+                   'emis_ene', ! EDGAR-HTAPv2.2 
+                   'emis_shp', ! EDGAR-HTAPv2.2 
+                   'emis_cds', ! EDGAR-HTAPv2.2 
+                   'emis_crs', ! EDGAR-HTAPv2.2 
+                   'emis_lto', ! EDGAR-HTAPv2.2 
+                   'emis_agr', ! EDGAR-HTAPv2.2, emis_agr only for NH3 emissions
+                   'emis_tot'  ! EDGAR-HTAPv2.2 
+ cat_var_prefix      = ' '
+ data_yrs_offset     = 6,
+ emissions_zdim_stag = 1
+ emis_map = 'NH3_TRA->NH3(emis_tra)','NH3_IND->NH3(emis_ind)',
+            'NH3_RES->NH3(emis_res)','NH3_POW->NH3(emis_ene)',
+            'NH3_AGR->NH3(emis_agr)','NH3->NH3(emis_tot)',
+            'CO_TRA->CO(emis_tra)','CO_IND->CO(emis_ind)',
+            'CO_RES->CO(emis_res)','CO_POW->CO(emis_ene)',
+            'CO_SHP->CO(emis_shp)','CO_CDS->CO(emis_cds)',
+            'CO_CRS->CO(emis_crs)','CO_LTO->CO(emis_lto)',
+            'CO->CO(emis_tot)',
+            'C2H2_TRA->0.00561790*CO(emis_tra)','C2H2_IND->0.00561790*CO(emis_ind)',
+            'C2H2_RES->0.00561790*CO(emis_res)','C2H2_POW->0.00561790*CO(emis_ene)',
+            'C2H2_SHP->0.00561790*CO(emis_shp)','C2H2_CDS->0.00561790*CO(emis_cds)',
+            'C2H2_CRS->0.00561790*CO(emis_crs)','C2H2_LTO->0.00561790*CO(emis_lto)',
+            'C2H2->0.00561790*CO(emis_tot)'
+/

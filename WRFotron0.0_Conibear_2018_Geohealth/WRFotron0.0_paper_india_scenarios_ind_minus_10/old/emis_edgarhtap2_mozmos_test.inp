@@ -1,0 +1,32 @@
+&CONTROL
+ domains = __domains__
+ anthro_dir = '__emissDir__'
+ src_file_prefix = 'EDGARHTAP2_'
+ src_file_suffix = '_2010.0.1x0.1.nc'
+ src_names = 'CO(28)','NOx(30)','SO2(64)','NH3(17)','BC(12)','OC(12)','PM2.5(1)','PM10(1)',
+             'BIGALK(72)','BIGENE(56)','C2H4(28)','C2H5OH(46)','C2H6(30)','CH2O(30)',
+             'CH3CHO(44)','CH3COCH3(58)','CH3OH(32)','MEK(72)','TOLUENE(92)','C3H6(42)','C3H8(44)',
+             'BENZENE(78)','XYLENE(106)'
+ sub_categories  = 'emis_tra',
+                   'emis_ind',
+                   'emis_res',
+                   'emis_ene',
+                   'emis_shp',
+                   'emis_cds',
+                   'emis_crs',
+                   'emis_lto',
+                   'emis_agr', ! emis_agr only for NH3 emissions
+                   'emis_tot' 
+ cat_var_prefix  = ' '
+! serial_output   = .true.
+! start_output_time = '__startYear__-__startMonth__-__startDay_____startHour__:00:00'
+! stop_output_time = '__endYear__-__endMonth__-__endDay_____endHour__:00:00'
+! output_interval = 3600
+ data_yrs_offset   = __emissYearOffset__,
+ emissions_zdim_stag = 1
+ emis_map = 'ECI->0.1*BC','ECJ->0.9*BC','CO->CO','C2H2->0.00561790*CO','NH3->NH3','NO->0.8*NOx','NO2->0.2*NOx',
+            'ORGI->0.1*OC','ORGJ->0.9*OC','PM_10->PM10','PM25I->0.1*PM2.5','PM25J->0.9*PM2.5','SO2->SO2',
+            'BIGALK->BIGALK','BIGENE->BIGENE','C2H4->C2H4','C2H5OH->C2H5OH','C2H6->C2H6','CH2O->CH2O','CH3CHO->CH3CHO',
+            'CH3COCH3->CH3COCH3','CH3OH->CH3OH','MEK->MEK','TOLUENE->TOLUENE','C3H6->C3H6','C3H8->C3H8','BENZENE->BENZENE',
+            'XYLENE->XYLENE'
+/

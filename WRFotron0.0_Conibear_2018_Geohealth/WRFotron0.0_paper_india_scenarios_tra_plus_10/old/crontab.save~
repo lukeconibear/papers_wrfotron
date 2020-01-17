@@ -1,0 +1,24 @@
+SHELL=/bin/bash
+MAILTO=pmlac@leeds.ac.uk
+#* * * * * /bin/touch /home/ufaserv1_i/pmlac/`/bin/date "+\%Y\%m\%d\%H\%M"`
+#13 13 13 * * /bin/find /nobackup/pmlac/ -exec /bin/touch {} \;
+* * 25 * * /bin/find /nobackup/pmlac/ -exec /bin/touch -h {} \;
+00 06 * * * /bin/bash /home/ufaserv1_i/pmlac/wrf_new/get_GFS_fcst.bash `/bin/date "+\%Y \%m \%d"` 00
+00 12 * * * /bin/bash /home/ufaserv1_i/pmlac/wrf_new/get_GFS_fcst.bash `/bin/date "+\%Y \%m \%d"` 12
+#
+# GFS analyses replace forecasts
+00 15 * * * /bin/bash /home/ufaserv1_i/pmlac/wrf_new/get_GFS_analysis.bash `/bin/date -u --date="1 days ago" "+\%Y \%m \%d"`
+
+
+#   Crontab file for Nobackup Directory for Luke Conibear (username: pmlac)
+#SHELL=/bin/bash
+#MAILTO=pmlac@leeds.ac.uk
+#-----------------------------------------------------------------------------
+#Min   Hour   Day     Month   Weekday Command
+#-----------------------------------------------------------------------------
+#* * * * * /bin/touch /home/ufaserv1_i/pmlac/`/bin/date "+\%Y\%m\%d\%H\%M"`
+#13     13     13       *       *       /bin/find /nobackup/pmlac/ -exec /bin/touch {} \;
+#00     06      *       *       *       /bin/bash /home/ufaserv1_i/pmlac/wrf_new/get_GFS_fcst.bash `/bin/date "+\%Y \%m \%d"` 00
+#00     12      *       *       *       /bin/bash /home/ufaserv1_i/pmlac/wrf_new/get_GFS_fcst.bash `/bin/date "+\%Y \%m \%d"` 12
+# GFS analyses replace forecasts
+#00     15      *       *       * /bin/bash /home/ufaserv1_i/pmlac/wrf_new/get_GFS_analysis.bash `/bin/date -u --date="1 days ago" "+\%Y \%m \%d"`
