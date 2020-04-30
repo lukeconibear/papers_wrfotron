@@ -1,4 +1,5 @@
 ## WRF-Chem code for academic papers
+For the GitHub repository for the main WRFotron code, please see [here](https://github.com/wrfchem-leeds/WRFotron).  
 #### WRFotron folders
 - [WRFotron0.0_Conibear_2018_NatureCommunications](https://github.com/lukeconibear/papers_wrfotron/tree/master/WRFotron0.0_Conibear_2018_NatureCommunications)  
 **Conibear, L.**, Butt, E. W., Knote, C., Arnold, S. R., & Spracklen, D. V. (2018). Residential energy use emissions dominate health impacts from exposure to ambient particulate matter in India. Nature Communications, 9(617), 19.
