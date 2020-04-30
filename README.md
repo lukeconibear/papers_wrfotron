@@ -8,5 +8,5 @@
 [DOI](https://doi.org/10.1029/2018GH000139)  
 **Conibear, L.**, Butt, E. W., Knote, C., Spracklen, D. V., & Arnold, S. R. (2018). Current and future disease burden from ambient ozone exposure in India. GeoHealth, 2. 334-355.
 [DOI](https://doi.org/10.1029/2018GH000168)  
-- [WRFotron2.0_Conibear_2020_EnvironmentalResearchLetters](https://github.com/lukeconibear/papers_wrfotron/tree/master/WRFotron0.0_Conibear_2018_EnvironmentalResearchLetters)  
+- [WRFotron2.0_Conibear_2020_EnvironmentalResearchLetters](https://github.com/lukeconibear/papers_wrfotron/tree/master/WRFotron2.0_Conibear_2020_EnvironmentalResearchLetters)  
 **Conibear, L.**, Butt, E. W., Knote, C., Lam, N. L., Arnold, S. R., Tiberwal, T., Venkataraman, C., Spracklen, D. V., Bond, T. C. (2020). A complete transition to clean household energy can save onequarter of the healthy life lost to particulate matter pollution exposure in India. Environmental Research Letters. [DOI](https://doi.org/10.1088/1748-9326/ab8e8a)  
