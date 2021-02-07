@@ -1,0 +1,8 @@
+ io_form_auxinput5                   = 2,
+ ! io_form_auxinput5                   = 2,
+ ! auxinput5_interval_m                = 60,
+ ! frames_per_auxinput5                = 1,
+ ! auxinput5_inname                    = 'wrfchemi_d<domain>_<date>'
+ io_form_auxinput6                   = 2,
+ auxinput6_inname                    = 'wrfbiochemi_d<domain>'
+ auxinput6_interval_d                = 600,

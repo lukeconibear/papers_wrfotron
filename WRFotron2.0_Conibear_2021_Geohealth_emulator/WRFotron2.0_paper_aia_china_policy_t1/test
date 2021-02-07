@@ -1,0 +1,22 @@
+&control
+domains        = 1,
+fire_directory = '/geos/d21/s1878599/EMISSIONS_WRF/fire_data/',
+fire_filename  = 'GLOBAL_FINNv15_2017_MOZART_01022019.txt'
+wrf_directory  = '/scratch/local/s1878599/WRFchem4.1.2/WRF/test/em_real_autumn_bptb/',
+start_date     = '2017-10-11',
+end_date       = '2017-11-16',
+diag_level     = 1,
+wrf2fire_map = 'co -> CO', 'no -> NO', 'so2 -> SO2', 'bigalk -> BIGALK',
+               'bigene -> BIGENE', 'c2h4 -> C2H4', 'c2h5oh -> C2H5OH',
+	        'c2h6 -> C2H6', 'c3h8 -> C3H8','c3h6 -> C3H6','ch2o -> CH2O', 'ch3cho -> CH3CHO',
+	        'ch3coch3 -> CH3COCH3','ch3oh -> CH3OH','mek -> MEK','toluene -> 0.33*TOLUENE',
+		'benzene -> 0.33*TOLUENE','xylenes-> 0.33*TOLUENE','xylene->0.33*TOLUENE',
+	        'nh3 -> NH3','no2 -> NO2','open -> BIGALD','c10h16 -> C10H16',
+	        'ch3cooh -> CH3COOH','cres -> CRESOL','glyald -> GLYALD','mgly -> CH3COCHO',
+                'acetol -> HYAC','isop -> ISOP','macr -> MACR'
+                'mvk -> MVK','apin -> C10H16','ch3cn -> CH3CN','hcn -> HCN','hcooh -> HCOOH','c2h2 -> C2H2',
+	        'oc -> 0.24*PM25 + 0.3*PM10;aerosol', 'bc -> 0.01*PM25 + 0.08*PM10;aerosol',
+		'sulf -> -0.01*PM25 + 0.02*PM10;aerosol', 
+		'pm25 -> 0.36*PM25;aerosol','pm10 -> -0.61*PM25 + 0.61*PM10;aerosol'
+/
+
