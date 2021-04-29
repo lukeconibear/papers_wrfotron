@@ -2,7 +2,7 @@
 For the GitHub repository for the main WRFotron code, please see [here](https://github.com/wrfchem-leeds/WRFotron).  
 #### WRFotron folders
 - [WRFotron2.0_Conibear_2021_GeoHealth_emulator](https://github.com/lukeconibear/papers_wrfotron/tree/master/WRFotron2.0_Conibear_2021_Geohealth_emulator)  
-**Conibear, L.**, Reddington, C. L., Silver, B. J., Chen, Y., Knote, C., Arnold, S. R., Spracklen, D. V. (2021). Statistical emulation of winter ambient fine particulate matter concentrations from emission changes in China. GeoHealth (in peer review). [DOI](https://doi.org/10.1029/2021GH000391)  
+**Conibear, L.**, Reddington, C. L., Silver, B. J., Chen, Y., Knote, C., Arnold, S. R., Spracklen, D. V. (2021). Statistical emulation of winter ambient fine particulate matter concentrations from emission changes in China. GeoHealth. [DOI](https://doi.org/10.1029/2021GH000391)  
 - [WRFotron2.0_Conibear_2021_GeoHealth_policies](https://github.com/lukeconibear/papers_wrfotron/tree/master/WRFotron2.0_Conibear_2021_Geohealth_policies)  
 **Conibear, L.**, Reddington, C. L., Silver, B. J., Knote, C., Arnold, S. R., Spracklen, D. V. (2021). Regional policies targeting residential solid fuel and agricultural emissions can improve air quality and public health in the Greater Bay Area and across China. GeoHealth. [DOI](https://doi.org/10.1029/2020GH000341)  
 - [WRFotron2.0_Conibear_2020_EnvironmentalResearchLetters](https://github.com/lukeconibear/papers_wrfotron/tree/master/WRFotron2.0_Conibear_2020_EnvironmentalResearchLetters)  
